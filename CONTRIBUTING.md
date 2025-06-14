@@ -1,15 +1,18 @@
 # Contributing
 
-Thank you for your interest in contributing! This guide will help you understand our contribution process and standards.
+Thank you for your interest in contributing! This guide will help you understand our contribution
+process and standards.
 
 ## 🚀 **Quick Setup**
 
 ### Prerequisites
+
 - **Node.js** 22+
 - **pnpm** (recommended package manager)
 - **Git** for version control
 
 ### Development Environment
+
 ```bash
 # Clone the repository
 git clone https://github.com/puzzlers-labs/maraikka-docs.git
@@ -17,6 +20,9 @@ cd maraikka-docs
 
 # Install dependencies
 pnpm install
+
+# Set up git hooks (automatic after install)
+pnpm prepare
 
 # Start development server
 pnpm dev
@@ -27,6 +33,7 @@ Visit `http://localhost:3000` to see your changes in real-time.
 ## 🛠️ **Development Tools**
 
 ### Essential VSCode Extensions
+
 When you open this project, you'll be prompted to install 3 essential extensions:
 
 1. **Markdown Preview Enhanced** - Advanced markdown editing and preview
@@ -35,27 +42,42 @@ When you open this project, you'll be prompted to install 3 essential extensions
 
 These extensions are automatically configured for optimal documentation workflow.
 
-### Code Formatting
-- **Prettier** handles all formatting automatically
-- **Format on save** is enabled by default
-- **Trailing spaces** are automatically removed
-- **Consistent line endings** across platforms
+### Code Quality Tools
+
+The project includes automated quality assurance:
+
+- **ESLint** - Code quality and consistency checks
+- **Prettier** - Automatic code formatting
+- **Husky** - Git hooks for automated quality checks
+- **Lint-staged** - Pre-commit code formatting and linting
+- **Pagefind** - Static search index generation
+
+### Automated Quality Checks
+
+When you commit code, the following happens automatically:
+
+1. **ESLint** checks code quality
+2. **Prettier** formats your code
+3. **Lint-staged** ensures only quality code is committed
 
 ## 📝 **Content Guidelines**
 
 ### Writing Style
+
 - **Clear and concise** - Use simple, understandable language
 - **User-focused** - Write from the user's perspective
 - **Action-oriented** - Use active voice and clear instructions
 - **Consistent terminology** - Use the same terms throughout
 
 ### File Organization
+
 - Place content files in the `content/` directory
 - Use descriptive, kebab-case filenames (`getting-started.mdx`)
-- Organize related content in subdirectories
-- Include proper frontmatter metadata
+- Organize related content in subdirectories with `meta.json` navigation files
+- Include proper frontmatter metadata for SEO
 
 ### MDX Format
+
 All documentation uses MDX (Markdown + React components):
 
 ```mdx
@@ -69,59 +91,65 @@ description: "Page description for SEO"
 Your content here...
 ```
 
-## 📊 **SEO Metadata Guidelines**
+## 📊 **SEO Requirements**
 
-### Required Frontmatter Structure
+**📋 CRITICAL: All content MUST follow SEO guidelines. See
+[SEO-OPTIMIZATION.md](./SEO-OPTIMIZATION.md) for complete strategy and implementation details.**
 
-Add this frontmatter block at the top of every MDX file:
+### **Mandatory Frontmatter**
+
+Every MDX file MUST include this frontmatter block:
 
 ```yaml
 ---
 title: "Page Title - Maraikka Documentation"
-description: "Detailed description of the page content (150-160 characters optimal)"
-keywords: "relevant, keywords, separated, by, commas"
+description: "150-160 character description with keywords"
+keywords: "keyword1, keyword2, keyword3"
 author: "Puzzlers Labs"
-type: "article"
-section: "Documentation Section"
-lastModified: "YYYY-MM-DD"
-openGraph:
-  title: "Social Media Title (can be different from main title)"
-  description: "Social media description (may differ from main description)"
-  type: "article"
-  images:
-    - url: "/images/page-specific-image.png"
-      width: 1200
-      height: 630
-      alt: "Descriptive alt text for the image"
-twitter:
-  card: "summary_large_image"
-  title: "Twitter-specific title"
-  description: "Twitter-specific description"
-  images: ["/images/twitter-card-image.png"]
-canonical: "https://docs.maraikka.com/page-url"
 ---
 ```
 
-### Metadata Best Practices
+### **Quick SEO Checklist**
 
-#### **Title Field**
-- **Format**: `"Specific Page Title - Maraikka Documentation"`
-- **Length**: 50-60 characters optimal
-- **Example**: `"Security Guide - Maraikka Documentation"`
+Before submitting any content:
 
-#### **Description Field**
-- **Length**: 150-160 characters for optimal search snippet display
-- **Content**: Clear summary of page content with primary keywords
-- **Example**: `"Complete security guide for Maraikka. Learn about AES-256 encryption, password security, hardware authentication, and security best practices."`
+- [ ] **Title**: 50-60 characters, includes primary keyword
+- [ ] **Description**: 150-160 characters, compelling with keywords
+- [ ] **Keywords**: 5-10 relevant, researched terms
+- [ ] **Headings**: Proper H1 > H2 > H3 hierarchy
+- [ ] **Images**: Descriptive alt text, optimized file sizes
+- [ ] **Links**: Internal links to related content
+- [ ] **Mobile**: Content displays properly on mobile
 
-#### **Keywords Field**
-- **Format**: Comma-separated list of relevant terms
-- **Count**: 5-10 keywords optimal
-- **Example**: `"maraikka security, AES encryption, file security, password protection, FIDO2 authentication"`
+### **SEO Resources**
+
+- **[SEO-OPTIMIZATION.md](./SEO-OPTIMIZATION.md)** - Complete guidelines and examples
+- **[Technical SEO Implementation](./SEO-OPTIMIZATION.md#technical-seo-implementation)** - Advanced
+  optimization
+- **[Content SEO Guidelines](./SEO-OPTIMIZATION.md#content-seo-guidelines)** - Writing best
+  practices
+
+### Navigation Configuration
+
+When adding new sections, update the relevant `meta.json` file:
+
+```json
+{
+  "index": "Overview",
+  "getting-started": "Getting Started",
+  "installation": "Installation Guide",
+  "user-guide": "User Guide",
+  "features": "Features",
+  "troubleshooting": "Troubleshooting",
+  "security": "Security",
+  "api": "API Reference"
+}
+```
 
 ## 🎨 **Style Guidelines**
 
 ### Markdown Conventions
+
 - Use `#` for page titles (H1)
 - Use `##` for major sections (H2)
 - Use `###` for subsections (H3)
@@ -130,6 +158,7 @@ canonical: "https://docs.maraikka.com/page-url"
 - Use code blocks with language specification
 
 ### Code Examples
+
 Always include language specification for syntax highlighting:
 
 ```javascript
@@ -138,6 +167,7 @@ const example = "with language specified";
 ```
 
 ### Images and Media
+
 - Store images in `public/images/`
 - Use descriptive filenames (`feature-overview.png`)
 - Include alt text for accessibility
@@ -152,42 +182,51 @@ Before submitting your contribution, ensure:
 - [ ] Images are optimized and have alt text
 - [ ] Code examples are tested and functional
 - [ ] Spelling and grammar are correct
-- [ ] Frontmatter metadata is complete
+- [ ] Frontmatter metadata is complete and follows guidelines
 - [ ] Content follows style guidelines
+- [ ] ESLint passes (`pnpm lint`)
 - [ ] Local build succeeds (`pnpm build`)
+- [ ] Search functionality works with new content
 
 ## 🚀 **Submission Process**
 
 ### Creating a Pull Request
+
 1. **Fork** the repository to your GitHub account
 2. **Create a branch** for your changes (`git checkout -b feature/improve-docs`)
 3. **Make your changes** following the guidelines above
-4. **Test locally** to ensure everything works
-5. **Commit** with a clear, descriptive message
-6. **Push** to your fork and create a pull request
+4. **Test locally** to ensure everything works (`pnpm dev`)
+5. **Run quality checks** with `pnpm lint`
+6. **Commit** with a clear, descriptive message (hooks will run automatically)
+7. **Push** to your fork and create a pull request
 
 ### Pull Request Guidelines
+
 - **Clear title** describing the change
 - **Detailed description** of what was changed and why
 - **Reference issues** if applicable
 - **Include screenshots** for UI-related changes
 - **Test instructions** if needed
 
-### Review Process
-All contributions go through review:
-1. **Automated checks** - Formatting, links, build success
-2. **Content review** - Accuracy, clarity, style consistency
-3. **Technical review** - Code examples, technical accuracy
-4. **Final approval** and merge
-
 ## 📞 **Getting Help**
 
 ### Documentation Questions
+
 - **GitHub Discussions** - Ask questions and get community help
 - **GitHub Issues** - Report bugs or request improvements
-- **Email** - docs@maraikka.com - Direct contact with the documentation team
+- **Email** - hello@maraikka.com - Direct contact with the Maraikka team
+
+### Development Environment Issues
+
+If you encounter problems with the development setup:
+
+1. Ensure you're using Node.js 22+
+2. Try clearing node_modules and reinstalling: `rm -rf node_modules pnpm-lock.yaml && pnpm install`
+3. Check that git hooks are installed: `pnpm prepare`
+4. Verify ESLint and Prettier are working: `pnpm lint`
 
 ### Community Guidelines
+
 - Be respectful and constructive
 - Help others learn and contribute
 - Share knowledge and best practices
@@ -196,17 +235,28 @@ All contributions go through review:
 ## 🎯 **Contribution Ideas**
 
 ### High-Impact Contributions
+
 - **Fix typos and grammar** - Small but valuable improvements
 - **Add missing examples** - Help users understand features better
 - **Improve explanations** - Make complex topics clearer
 - **Add screenshots** - Visual aids for better understanding
 - **Update outdated content** - Keep documentation current
+- **Complete SEO metadata** - Add frontmatter to pages missing it
 
 ### Advanced Contributions
+
 - **Create new guides** - Cover advanced topics or workflows
-- **Improve SEO** - Enhance metadata and search optimization
+- **Improve search functionality** - Enhance Pagefind configuration
 - **Add interactive elements** - Enhance user experience
 - **Optimize performance** - Improve site speed and accessibility
+- **Enhance navigation** - Improve content organization and discoverability
+
+### Technical Contributions
+
+- **Improve build process** - Optimize development and deployment
+- **Add automation** - Enhance CI/CD and quality checks
+- **Update dependencies** - Keep the project current and secure
+- **Enhance SEO** - Improve search engine optimization
 
 ---
 
