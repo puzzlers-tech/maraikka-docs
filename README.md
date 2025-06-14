@@ -1,7 +1,7 @@
 # Maraikka Documentation
 
-This directory contains the complete documentation for Maraikka, built with
-[Nextra](https://nextra.site/) - a modern documentation framework based on Next.js.
+This directory contains the complete documentation for Maraikka, built with Nextra - a modern
+documentation framework based on Next.js.
 
 **Maraikka** - _Protect What Matters._
 
@@ -43,81 +43,44 @@ pnpm start
 ```
 maraikka-docs/
 ├── .cursor/                    # Cursor AI configuration
-│   └── rules/                  # AI development rules
 ├── .vscode/                    # VSCode workspace settings
-│   ├── extensions.json         # Recommended extensions
-│   └── settings.json           # Editor configuration
 ├── .husky/                     # Git hooks configuration
-│   └── pre-commit              # Pre-commit formatting and linting
 ├── app/                        # Next.js App Router
 │   ├── [[...mdxPath]]/         # Dynamic MDX routing
-│   │   └── page.jsx            # MDX page handler with SEO metadata
 │   └── layout.jsx              # Root layout with theme configuration
 ├── components/                 # React components
-│   └── CustomFooter.jsx        # Custom footer component
-├── content/                    # Documentation content
-│   ├── index.mdx               # Homepage
-│   ├── getting-started.mdx     # Getting started guide
-│   ├── get-started.mdx         # Alternative getting started
-│   ├── installation.mdx        # Installation guide
-│   ├── development.mdx         # Development documentation
-│   ├── security.mdx            # Security documentation
-│   ├── troubleshooting.mdx     # Troubleshooting guide
-│   ├── api.mdx                 # API documentation
-│   ├── meta.json               # Navigation metadata
-│   ├── user-guide/             # User guide section
-│   │   ├── index.mdx
-│   │   ├── encryption.mdx
-│   │   └── meta.json
-│   ├── features/               # Feature documentation
-│   │   ├── index.mdx
-│   │   ├── themes.mdx
-│   │   ├── image.mdx
-│   │   ├── mdx.mdx
-│   │   ├── ssg.mdx
-│   │   ├── i18n.mdx
-│   │   └── meta.json
-│   ├── themes/                 # Theme documentation
-│   └── advanced/               # Advanced topics
-├── public/                     # Static assets
-│   ├── images/                 # Documentation images
-│   ├── og.png                  # Open Graph image
-│   ├── demo.png                # Demo screenshot
-│   └── [favicon files]         # Various favicon formats
-├── .gitignore                  # Git ignore rules
-├── .husky/                     # Git hooks for quality assurance
-├── CONTRIBUTING.md             # Contribution guidelines
-├── SEO-OPTIMIZATION.md         # SEO strategy and implementation
-├── README.md                   # This file
+├── content/                    # Documentation content (MDX files)
+├── public/                     # Static assets and images
 ├── eslint.config.js            # ESLint configuration
 ├── prettier.config.js          # Code formatting rules
-├── mdx-components.jsx          # Global MDX components
 ├── next.config.js              # Next.js configuration
 ├── package.json                # Dependencies and scripts
-└── pnpm-lock.yaml              # Dependency lock file
+├── CONTRIBUTING.md             # Contribution guidelines
+├── SEO-OPTIMIZATION.md         # SEO strategy and implementation
+└── README.md                   # This file
 ```
 
 ## 🛠️ **Technology Stack**
 
 ### Core Framework
 
-- **[Next.js 15.3.3](https://nextjs.org/)** - React framework with App Router
-- **[Nextra 4.2.17](https://nextra.site/)** - Documentation framework
-- **[React 19.1.0](https://react.dev/)** - UI library
+- **Next.js** - React framework with App Router
+- **Nextra** - Documentation framework
+- **React** - UI library
 
 ### Development Tools
 
-- **[pnpm 10.12.1](https://pnpm.io/)** - Fast, disk space efficient package manager
-- **[ESLint 9.29.0](https://eslint.org/)** - Code quality and linting
-- **[Prettier](https://prettier.io/)** - Code formatter with ES module configuration
-- **[Husky 9.1.7](https://typicode.github.io/husky/)** - Git hooks for automation
-- **[Lint-staged 16.1.1](https://github.com/okonet/lint-staged)** - Pre-commit code quality
-- **[VSCode](https://code.visualstudio.com/)** - Recommended editor with optimized settings
+- **pnpm** - Fast, disk space efficient package manager
+- **ESLint** - Code quality and linting
+- **Prettier** - Code formatter with ES module configuration
+- **Husky** - Git hooks for automation
+- **Lint-staged** - Pre-commit code quality
+- **VSCode** - Recommended editor with optimized settings
 
 ### Content Management
 
-- **[MDX](https://mdxjs.com/)** - Markdown with React components
-- **[Pagefind 1.3.0](https://pagefind.app/)** - Static search functionality
+- **MDX** - Markdown with React components
+- **Pagefind** - Static search functionality
 - **Frontmatter** - YAML metadata for SEO and page configuration
 - **Static Generation** - Pre-rendered pages for optimal performance
 
@@ -210,7 +173,7 @@ pnpm prepare      # Set up Husky git hooks
 ### Performance Optimization
 
 - **Static Generation** - All pages pre-rendered at build time
-- **Image Optimization** - Automatic image compression and sizing
+- **Static Export** - Generates static HTML files for hosting anywhere
 - **Bundle Splitting** - Optimized JavaScript loading
 - **Caching** - Aggressive caching for static assets
 - **Search Index** - Pagefind generates static search functionality
@@ -228,20 +191,6 @@ pnpm postbuild    # Generates Pagefind search index
 
 # Output directory: ./out/
 # Deploy the contents of ./out/ to your hosting provider
-```
-
-### Hosting Options
-
-- **Vercel** - Recommended for Next.js applications
-- **Netlify** - Static site hosting with continuous deployment
-- **GitHub Pages** - Free hosting for open source projects
-- **AWS S3** - Scalable cloud storage with CloudFront CDN
-
-### Environment Variables
-
-```bash
-# .env.local
-NEXT_PUBLIC_SITE_URL=https://docs.maraikka.com
 ```
 
 ## 🤝 **Contributing**
@@ -270,18 +219,14 @@ We welcome contributions to improve the documentation! Please see
 
 - **GitHub Issues** - Report bugs or request features
 - **Discussions** - Ask questions and share ideas
-- **Email** - docs@maraikka.com for direct support
-
-### Community
-
-- **Discord** - Join our community server
-- **Twitter** - Follow [@PuzzlersLabs](https://twitter.com/PuzzlersLabs)
-- **Website** - [maraikka.com](https://maraikka.com)
+- **Email** - hello@maraikka.com for direct support
 
 ## 📄 **License**
 
-This documentation is licensed under the [MIT License](LICENSE). The Maraikka application itself may
-have different licensing terms.
+This documentation is licensed under a [Modified MIT License](LICENSE) that permits free
+non-commercial use but requires explicit permission for commercial use. **Important:** This license
+applies ONLY to this documentation project - the main Maraikka application and all other Maraikka
+components operate under completely separate and independent licensing terms.
 
 ---
 
