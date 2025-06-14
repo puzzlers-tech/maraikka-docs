@@ -30,7 +30,7 @@ export async function generateMetadata(props) {
     title: baseTitle,
     description: baseDescription,
     keywords: metadata?.keywords,
-    authors: metadata?.author ? [{ name: metadata.author }] : [{ name: 'Maraikka Labs' }],
+    authors: metadata?.author ? [{ name: metadata.author }] : [{ name: 'Puzzlers Labs' }],
 
     // Canonical URL for SEO
     alternates: {
@@ -61,7 +61,7 @@ export async function generateMetadata(props) {
       title: metadata?.twitter?.title || baseTitle,
       description: metadata?.twitter?.description || baseDescription,
       images: metadata?.twitter?.images || ['/images/maraikka-twitter-default.png'],
-      creator: '@MaraikkaLabs'
+      creator: '@puzzlers_labs'
     },
 
     // Additional metadata for documentation
@@ -69,7 +69,7 @@ export async function generateMetadata(props) {
 
     // Structured data for search engines
     other: {
-      'article:author': metadata?.author || 'Maraikka Labs',
+      'article:author': metadata?.author || 'Puzzlers Labs',
       'article:section': metadata?.section,
       'article:modified_time': metadata?.lastModified,
       'article:published_time': metadata?.publishedDate || metadata?.lastModified,

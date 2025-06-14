@@ -198,5 +198,5 @@ export default async function RootLayout({ children }) {
 //
 // BRANDING:
 // - Custom logo with lock icon and violet color
-// - Maraikka Labs copyright and MIT license
+// - Puzzlers Labs copyright and MIT license
 // - Consistent styling across all pages
