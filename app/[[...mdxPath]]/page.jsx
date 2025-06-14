@@ -22,7 +22,7 @@ export async function generateMetadata(props) {
 
   // Base metadata with fallbacks
   const baseTitle = metadata?.title || 'Maraikka Documentation'
-  const baseDescription = metadata?.description || 'Complete documentation for Maraikka - Protect What Matters.'
+  const baseDescription = metadata?.description || 'Documentation for Maraikka - Protect What Matters.'
 
   // Build comprehensive metadata object
   return {
