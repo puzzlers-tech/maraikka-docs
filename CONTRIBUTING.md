@@ -1,6 +1,6 @@
-# Contributing to Maraikka Documentation
+# Contributing
 
-Thank you for your interest in contributing to the Maraikka documentation! This guide will help you understand our contribution process and standards.
+Thank you for your interest in contributing! This guide will help you understand our contribution process and standards.
 
 ## 🚀 **Quick Setup**
 
