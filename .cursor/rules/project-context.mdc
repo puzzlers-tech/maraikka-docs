@@ -35,6 +35,37 @@ alwaysApply: true
 - **Dependency notes** explaining why specific versions are used
 - **Environment considerations** for different deployment scenarios
 
+## 🎨 **Documentation Style Guidelines**
+
+### **Comment Formatting Standards:**
+- **NO divider lines** - Avoid `====`, `----`, `***`, `###` or similar repetitive character dividers
+- **Clean section headers** - Use descriptive comment headers without decoration
+- **Consistent spacing** - Single blank line between sections
+- **Clear hierarchy** - Use comment nesting and indentation for organization
+
+### **Preferred Comment Style:**
+```javascript
+// Main Section Title
+// Brief description of what this section does
+
+// Subsection
+// Specific explanation
+
+// Another item
+// Clear, concise explanation
+```
+
+### **Avoid These Patterns:**
+```javascript
+// ====================================
+// Section Title (DON'T USE)
+// ====================================
+
+// ------------------------------------
+// Another Section (DON'T USE)
+// ------------------------------------
+```
+
 ## 🛠️ **AI-Specific Development Instructions**
 
 ### Content Creation Standards:
