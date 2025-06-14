@@ -3,7 +3,7 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Cursor AI Development Rules for Maraikka Documentation
+# Cursor AI Development Rules
 
 ## 📖 **IMPORTANT: Read Project Context**
 **Before starting any work, reference README.md for complete project information including:**
@@ -39,6 +39,7 @@ alwaysApply: true
 
 ### **Comment Formatting Standards:**
 - **NO divider lines** - Avoid `====`, `----`, `***`, `###` or similar repetitive character dividers
+- **NO project name repetition** - NEVER add "for Maraikka Documentation" or similar project-specific suffixes to file headers
 - **Clean section headers** - Use descriptive comment headers without decoration
 - **Consistent spacing** - Single blank line between sections
 - **Clear hierarchy** - Use comment nesting and indentation for organization
