@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    // Markdown Support
+    "shd101wyy.markdown-preview-enhanced",
+
+    // Code Quality and Formatting
+    "shardulm94.trailing-spaces"
+  ]
+}
