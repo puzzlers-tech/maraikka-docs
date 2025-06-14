@@ -25,6 +25,13 @@
   // Hides the Problems panel to reduce distractions during documentation work
   "problems.visibility": false,
 
+  // Language-Specific Validation Control
+  // Disables validation for JavaScript/TypeScript in documentation files
+  "[mdx]": {
+    "javascript.validate.enable": false,
+    "typescript.validate.enable": false
+  },
+
   // Trailing Spaces Configuration (Essential Extension)
   // Automatically removes trailing whitespace and highlights it for clean commits
   "trailing-spaces.trimOnSave": true,
