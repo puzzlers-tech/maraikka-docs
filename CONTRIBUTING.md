@@ -224,6 +224,8 @@ If you encounter problems with the development setup:
 2. Try clearing node_modules and reinstalling: `rm -rf node_modules pnpm-lock.yaml && pnpm install`
 3. Check that git hooks are installed: `pnpm prepare`
 4. Verify ESLint and Prettier are working: `pnpm lint`
+5. **Prettier ES module error**: If you get "module is not defined in ES module scope", ensure
+   `prettier.config.js` uses `export default` syntax (not `module.exports`)
 
 ### Community Guidelines
 
