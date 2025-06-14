@@ -2,7 +2,7 @@
 // This file configures Prettier code formatting for consistent,
 // professional documentation across all contributors.
 
-module.exports = {
+export default {
   // Core Formatting Rules
 
   // Indentation: Use 2 spaces for all files
@@ -19,17 +19,17 @@ module.exports = {
 
   // Unix line endings for cross-platform compatibility
   // Prevents Git issues with different operating systems
-  endOfLine: 'lf',
+  endOfLine: "lf",
 
   // Don't automatically wrap prose text by default
   // Preserves intentional formatting in documentation
-  proseWrap: 'preserve',
+  proseWrap: "preserve",
 
   // File-Specific Overrides
   overrides: [
     {
       // Documentation files: Markdown and MDX
-      files: ['*.md', '*.mdx'],
+      files: ["*.md", "*.mdx"],
       options: {
         // Wider line width for better prose readability
         // 100 characters accommodates longer sentences while staying readable
@@ -37,12 +37,12 @@ module.exports = {
 
         // Always wrap prose for consistent line breaks
         // Ensures clean diffs in version control and consistent formatting
-        proseWrap: 'always',
+        proseWrap: "always",
       },
     },
     {
       // Configuration files: JSON, package.json, etc.
-      files: '*.json',
+      files: "*.json",
       options: {
         // Extra wide for long configuration strings and URLs
         // Prevents awkward breaking of configuration values
@@ -54,7 +54,7 @@ module.exports = {
       },
     },
   ],
-}
+};
 
 // Why This Configuration?
 //
