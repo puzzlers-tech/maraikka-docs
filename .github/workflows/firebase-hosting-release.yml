@@ -53,7 +53,7 @@ jobs:
         run: |
           RELEASE_TAG=${GITHUB_REF#refs/tags/}
           echo "Updating package.json version to $RELEASE_TAG"
-          npm version $RELEASE_TAG --no-git-tag-version
+          pnpm version $RELEASE_TAG --no-git-tag-version
           git config --local user.email "tech@puzzlers-labs.com"
           git config --local user.name "Puzzlers Labs [release-bot]"
           git add package.json
