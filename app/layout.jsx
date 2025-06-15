@@ -8,6 +8,8 @@ import { getPageMap } from "nextra/page-map";
 import Image from "next/image";
 import CustomFooter from "../components/CustomFooter";
 import "nextra-theme-docs/style.css";
+import "../public/styles/not-found.css";
+import "../public/styles/custom-footer.css";
 
 // Site Metadata Configuration
 // Defines default metadata for SEO, Open Graph, and browser display
