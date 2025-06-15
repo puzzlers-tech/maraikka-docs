@@ -2,7 +2,7 @@
   "name": "maraikka-docs",
   "version": "0.1.0",
   "description": "Documentation for Maraikka - Protect What Matters. Secure file encryption software with AES-256 encryption.",
-  "homepage": "https://maraikka.com",
+  "homepage": "https://docs.maraikka.com",
   "private": true,
   "type": "module",
   "scripts": {
